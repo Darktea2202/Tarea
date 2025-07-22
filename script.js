@@ -46,6 +46,9 @@ const peticionApi = async (pokemon) => {
         pokemonAbilities.textContent = habilidades.charAt(0).toUpperCase() + habilidades.slice(1);
         pokemonExperience.textContent = experienciaBase;
 
+        console.log(respuesta);
+        console.log(respuesta.name);
+
         clearErrorMessage();
         
     } catch (error) {
