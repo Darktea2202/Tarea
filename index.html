@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <h1 class="title">API POKEMON</h1>
+        
+        <div class="search__container">
+            <input type="text" id="pokemon__search" placeholder="Busca un Pokémon..." class="search__input">
+            <button id="search__button" class="search__button">Buscar</button>
+        </div>
+
+        <article class="card" id="pokemon__card">
+
+            <div class="initial__message" id="initial__message">
+                <h2 class="initial__text">¿Qué Pokémon quieres buscar?</h2>
+            </div>
+            
+            <div class="pokemon__content" id="pokemon__content" style="display: none;">
+                <h2 class="card__title" id="pokemon__name"></h2>
+                <div class="img__container">
+                    <img class="img__pokemon" src="" alt="" id="img__pokemon">
+                </div>
+                <p class="pokemon__id" id="pokemon__id"></p>
+                
+                <div class="pokemon__stats">
+                    <h3 class="stats__title">Características:</h3>
+                    <div class="stats__grid">
+                        <div class="stat__item">
+                            <span class="stat__label">Altura:</span>
+                            <span class="stat__value" id="pokemon__height"></span>
+                        </div>
+                        <div class="stat__item">
+                            <span class="stat__label">Peso:</span>
+                            <span class="stat__value" id="pokemon__weight"></span>
+                        </div>
+                        <div class="stat__item">
+                            <span class="stat__label">Tipo(s):</span>
+                            <span class="stat__value" id="pokemon__types"></span>
+                        </div>
+                        <div class="stat__item">
+                            <span class="stat__label">Habilidades:</span>
+                            <span class="stat__value" id="pokemon__abilities"></span>
+                        </div>
+                        <div class="stat__item">
+                            <span class="stat__label">Experiencia base:</span>
+                            <span class="stat__value" id="pokemon__experience"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
