@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <h1 class="title">API Rick and Morty</h1>
+        
+        <div class="search__container">
+            <input type="text" id="character__search" placeholder="Busca un personaje..." class="search__input">
+            <button id="search__button" class="search__button">Buscar</button>
+        </div>
+
+        <article class="card" id="character__card">
+
+            <div class="initial__message" id="initial__message">
+                <h2 class="initial__text">¿Qué personaje quieres buscar?</h2>
+            </div>
+            
+            <div class="character__content" id="character__content" style="display: none;">
+                <h2 class="card__title" id="character__name"></h2>
+                <div class="img__container">
+                    <img class="img__character" src="" alt="" id="img__character">
+                </div>
+                <p class="character__id" id="character__id"></p>
+
+                <div class="character__stats">
+                    <h3 class="stats__title">Características:</h3>
+                    <div class="stats__grid">
+                        <div class="stat__item">
+                            <span class="stat__label">Nombre:</span>
+                            <span class="stat__value" id="character__name"></span>
+                        </div>
+                        <div class="stat__item">
+                            <span class="stat__label">Localizacion:</span>
+                            <span class="stat__value" id="character__location"></span>
+                        </div>
+                        <div class="stat__item">
+                            <span class="stat__label">Capitulo:</span>
+                            <span class="stat__value" id="character__episode"></span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
