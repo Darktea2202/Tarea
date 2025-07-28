@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Tic Tac Toe - Juego del Gato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        
+        <header class="game-header">
+            <h1>Tic Tac Toe</h1>
+            <p class="game-subtitle">¡El clásico juego del gato!</p>
+        </header>
+        
+        <div class="game-info">
+            <div id="status-display" class="status">
+                <span class="status-label">Turno del jugador:</span>
+                <span id="current-player" class="player-indicator">X</span>
+            </div>
+            
+            <div class="scoreboard">
+                <div class="score-item">
+                    <span class="player-name">Jugador X</span>
+                    <span id="score-x" class="score">0</span>
+                </div>
+                <div class="score-divider">-</div>
+                <div class="score-item">
+                    <span class="player-name">Jugador O</span>
+                    <span id="score-o" class="score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-board" class="board">
+
+            <div class="cell" data-index="0" data-row="0" data-col="0"></div>
+            <div class="cell" data-index="1" data-row="0" data-col="1"></div>
+            <div class="cell" data-index="2" data-row="0" data-col="2"></div>
+
+            <div class="cell" data-index="3" data-row="1" data-col="0"></div>
+            <div class="cell" data-index="4" data-row="1" data-col="1"></div>
+            <div class="cell" data-index="5" data-row="1" data-col="2"></div>
+
+            <div class="cell" data-index="6" data-row="2" data-col="0"></div>
+            <div class="cell" data-index="7" data-row="2" data-col="1"></div>
+            <div class="cell" data-index="8" data-row="2" data-col="2"></div>
+        </div>
+
+        <div id="game-message" class="message hidden">
+            <div class="message-content">
+                <span id="message-text"></span>
+                <div class="message-emoji" id="message-emoji"></div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="reset-button" class="btn btn-primary">
+             Nueva Partida
+            </button>
+            <button id="reset-score" class="btn btn-secondary">
+            Reiniciar Marcador
+            </button>
+        </div>
+
+        <div class="game-settings">
+            <details class="settings-panel">
+                <summary class="settings-toggle">Configuración</summary>
+                <div class="settings-content">
+                    <div class="setting-item">
+                        <label for="difficulty">Dificultad vs IA:</label>
+                        <select id="difficulty" class="setting-select">
+                            <option value="disabled">Dos Jugadores</option>
+                            <option value="easy">IA Fácil</option>
+                            <option value="medium">IA Medio</option>
+                            <option value="hard">IA Difícil</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="player-names">Personalizar nombres:</label>
+                        <div class="name-inputs">
+                            <input type="text" id="player-x-name" placeholder="Jugador X" maxlength="15">
+                            <input type="text" id="player-o-name" placeholder="Jugador O" maxlength="15">
+                        </div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="theme">Tema visual:</label>
+                        <select id="theme" class="setting-select">
+                            <option value="classic">Clásico</option>
+                            <option value="neon">Neón</option>
+                            <option value="minimal">Minimalista</option>
+                            <option value="dark">Oscuro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-item checkbox-item">
+                        <input type="checkbox" id="sound-effects" checked>
+                        <label for="sound-effects">Efectos de sonido</label>
+                    </div>
+                    
+                    <div class="setting-item checkbox-item">
+                        <input type="checkbox" id="animations" checked>
+                        <label for="animations">Animaciones</label>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <div class="game-history">
+            <details class="history-panel">
+                <summary class="history-toggle">Historial de Partidas</summary>
+                <div class="history-content">
+                    <div id="history-list" class="history-list">
+                        <p class="no-history">No hay partidas jugadas aún</p>
+                    </div>
+                    <button id="clear-history" class="btn btn-small">Limpiar Historial</button>
+                </div>
+            </details>
+        </div>
+
+        <div class="game-info-panel">
+            <details class="info-panel">
+                <summary class="info-toggle">¿Cómo jugar?</summary>
+                <div class="info-content">
+                    <h3>Reglas del Tic Tac Toe:</h3>
+                    <ul class="rules-list">
+                        <li><strong>Objetivo:</strong> Ser el primero en formar una línea de 3 símbolos iguales</li>
+                        <li><strong>Líneas válidas:</strong> Horizontal, vertical o diagonal</li>
+                        <li><strong>Turnos:</strong> Los jugadores alternan colocando X y O</li>
+                        <li><strong>Final:</strong> Gana quien complete una línea primero</li>
+                        <li><strong>Empate:</strong> Si se llena el tablero sin líneas completas</li>
+                    </ul>
+
+                    <h3>Consejos estratégicos:</h3>
+                    <ul class="tips-list">
+                        <li>Controla el centro del tablero</li>
+                        <li>Bloquea las líneas del oponente</li>
+                        <li>Crea múltiples amenazas simultáneas</li>
+                        <li>Observa los patrones del rival</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
